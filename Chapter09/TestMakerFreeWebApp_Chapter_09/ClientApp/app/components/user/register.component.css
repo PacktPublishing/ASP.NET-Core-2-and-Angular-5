@@ -1,0 +1,37 @@
+.login-container {
+  max-width: 600px;
+  padding: 40px 40px;
+  background-color: #F7F7F7;
+  margin: 0 0 25px 0;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+.login-container .login-img {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 50%;
+}
+.login-container .login-title {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: #444;
+}
+.login-container .login-forgot-password {
+  margin-top: 10px;
+  text-align: center;
+}
+.login-container .login-form .form-group {
+  margin-bottom: 8px;
+}
+.login-container .login-form .error-panel {
+  color: #e74c3c;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .login-container {
+    width: 100%;
+  }
+}

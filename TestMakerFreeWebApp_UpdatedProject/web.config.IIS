@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+      <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" />
+    </handlers>
+    <aspNetCore processPath="dotnet" arguments=".\TestMakerFreeWebApp_Chapter_10.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout">
+      <environmentVariables>
+        <environmentVariable name="ASPNETCORE_ENVIRONMENT" value="Production" />
+      </environmentVariables>
+    </aspNetCore>
+  </system.webServer>
+</configuration>
+<!--ProjectGuid: 81b3f8ce-a238-4850-829d-004a16bdea3e-->

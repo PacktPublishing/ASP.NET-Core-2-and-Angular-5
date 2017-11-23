@@ -1,0 +1,70 @@
+﻿<div class="quiz">
+    <div class="quiz-details">
+        <div class="quiz-image">
+            <img src="https://lorempixel.com/150/150/?random={{quiz.Id}}" 
+                 alt="{{quiz.Title}}" class="img-circle">
+        </div>
+        <div class="quiz-info-block">
+            <div class="quiz-heading">
+                <h2>{{quiz.Title}}</h2>
+                <span class="help-block">{{quiz.Description}}</span>
+                <!--<span class="help-block">Created by User # on {{quiz.CreatedDate}}</span>-->
+            </div>
+
+            <ul class="navigation">
+                <li class="active">
+                    <a data-toggle="tab" href="#description">
+                        <span class="glyphicon glyphicon-user"></span>
+                        &nbsp; Description
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#stats">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        &nbsp; Stats
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#share">
+                        <span class="glyphicon glyphicon-share-alt"></span>
+                        &nbsp; Share
+                    </a>
+                </li>
+            </ul>
+            <div class="quiz-body">
+                <div class="tab-content">
+                    <div id="description" class="tab-pane active">
+                        {{quiz.Text}}
+                    </div>
+                    <div id="stats" class="tab-pane">
+                        TO-DO
+                    </div>
+                    <div id="share" class="tab-pane">
+                        TO-DO
+                    </div>
+                </div>
+            </div>
+
+            <div class="commands">
+                <a [routerLink]="['/quiz', quiz.Id, 'take']"
+                   class="btn btn-success">
+                    <span class="glyphicon glyphicon-education"></span>
+                    &nbsp; Take the Test!
+                </a>
+                <a [routerLink]="['/home']"
+                   class="btn btn-default">
+                    <span class="glyphicon glyphicon-backward"></span>
+                    &nbsp; Back
+                </a>
+                <div class="edit">
+                    <input type="button" value="Edit"
+                           (click)="onEdit()"
+                           class="btn btn-sm btn-warning" />
+                    <input type="button" value="Delete"
+                           (click)="onDelete()"
+                           class="btn btn-sm btn-danger" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

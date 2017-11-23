@@ -1,0 +1,42 @@
+﻿.navbar-form {
+    &.search-header {
+        display: none;
+    }
+
+    &.search-navmenu {
+        display: block;
+        border: 0;
+        margin: 2px 0 0 0;
+        padding: 5px;
+        float: left;
+        width: calc(~"100% - 80px");
+        max-width: calc(~"100% - 80px");
+        min-width: 250px;
+
+        .form-group {
+            float: left;
+            margin: 0 10px 0 0;
+
+            input[type="text"] {
+                width: 180px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-form {
+        &.search-header {
+            display: block;
+            margin: 20px 0 0 20px;
+        }
+
+        &.search-navmenu {
+            display: none;
+
+            input[type="text"] {
+                width: 180px;
+            }
+        }
+    }
+}

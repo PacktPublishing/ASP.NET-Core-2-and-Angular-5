@@ -1,0 +1,102 @@
+﻿.quiz {
+    position: relative;
+    padding: 0;
+    text-align: center;
+    width: 80%;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
+    .quiz-details {
+        .quiz-image {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            text-align: center;
+
+            img {
+                width: 150px;
+                height: 150px;
+                clear: both;
+                margin: auto;
+                position: relative;
+                background-color: #ffffff;
+                border: 1px solid #707d8c;
+                padding: 2px;
+            }
+        }
+
+        .quiz-info-block {
+            width: 100%;
+            border-radius: 20px;
+            position: absolute;
+            top: 80px;
+            background: #f0f0f0;
+            z-index: 0;
+            padding: 60px 0 30px 0;
+
+            .quiz-heading {
+                width: 100%;
+                text-align: center;
+                margin: 10px 0 0;
+            }
+
+            .navigation {
+                margin: 20px 15px 0px 15px;
+                padding: 0;
+                list-style: none;
+                border-bottom: 1px solid #a3aab1;
+
+                li {
+                    display: inline-block;
+                    margin: 0 0 -6px 0;
+                    padding: 0;
+
+                    a {
+                        background: transparent;
+                        border-radius: 10px 10px 0 0;
+                        padding: 10px 30px;
+                        float: left;
+                    }
+
+                    &.active a {
+                        background: #4189C7;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .quiz-body {
+                padding: 20px 20px 30px 20px;
+
+                .tab-content {
+                    h4 {
+                        width: 100%;
+                        margin: 10px 0;
+                        color: #333;
+                    }
+                }
+            }
+
+            .commands {
+                border-top: 1px solid #dddddd;
+                width: 80%;
+                padding: 15px 0 0 0;
+                margin: 15px auto 0 auto;
+
+                .btn {
+                    min-width: 140px;
+                    margin: 0 10px;
+                }
+
+                .edit {
+                    border-top: 1px solid #dddddd;
+                    width: 80%;
+                    padding: 15px 0 0 0;
+                    margin: 15px auto 0 auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+﻿<h2>{{title}}</h2>
+<div class="answer-edit">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group"
+             [ngClass]="{ 'has-error has-feedback' : hasError('Text') }">
+            <label for="text">Answer text:</label>
+            <br />
+            <textarea id="text"
+                      formControlName="Text" required
+                      placeholder="enter a suitable text..."
+                      class="form-control"></textarea>
+            <span *ngIf="hasError('Text')" 
+                  class="glyphicon glyphicon-remove form-control-feedback" 
+                  aria-hidden="true"></span>
+            <div *ngIf="hasError('Text')"
+                 class="help-block">
+                Text is a required field: please insert a valid text.
+            </div>
+        </div>
+
+        <div class="form-group"
+             [ngClass]="{ 'has-error has-feedback' : hasError('Value') }">
+            <label for="value">Score Value:</label>
+            <br />
+            <select id="value"
+                    formControlName="Value" required
+                    class="form-control">
+                <option value="">Pick a value...</option>
+                <option *ngFor="let num of [-5,-4,-3,-2,-1,0,1,2,3,4,5]"
+                        [value]="num">
+                    {{num}}
+                </option>
+            </select>
+            <div *ngIf="hasError('Value')"
+                 class="help-block">
+                Please select a valid number between -5 and 5.
+            </div>
+        </div>
+
+        <div class="form-group commands">
+            <button *ngIf="editMode" type="submit"
+                    [disabled]="form.invalid"
+                    class="btn btn-success">
+                Apply Changes
+            </button>
+            <button *ngIf="!editMode" type="submit"
+                    [disabled]="form.invalid"
+                    class="btn btn-success">
+                Create the Answer!
+            </button>
+            <button type="submit"
+                    (click)="onBack()"
+                    class="btn btn-default">
+                Cancel
+            </button>
+        </div>
+
+    </form>
+</div>

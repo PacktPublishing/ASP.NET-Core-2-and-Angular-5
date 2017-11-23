@@ -1,0 +1,45 @@
+<div class='main-nav'>
+    <div class='navbar navbar-default'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <quiz-search class="search-navmenu" placeholder="Type here..."></quiz-search>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/home']">
+                        <span class='glyphicon glyphicon-home'></span> Home
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/about']">
+                        <span class='glyphicon glyphicon-info-sign'></span> About
+                    </a>
+                </li>
+                <li *ngIf="!auth.isLoggedIn()"
+                    [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/login']">
+                        <span class='glyphicon glyphicon-log-in'></span> Login / Register
+                    </a>
+                </li>
+                <li *ngIf="auth.isLoggedIn()">
+                    <a (click)="logout()">
+                        <span class='glyphicon glyphicon-log-out'></span> Logout
+                    </a>
+                </li>
+                <li *ngIf="auth.isLoggedIn()"
+                    [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/quiz/create']">
+                        <span class='glyphicon glyphicon-plus'></span> Create a Quiz
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿<div class="panel panel-primary {{class}}">
+    <div class="panel-heading">
+        <span class="glyphicon"></span>
+        <h4>{{title}}</h4>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item" 
+                *ngFor="let quiz of quizzes"
+                [class.selected]="quiz === selectedQuiz"
+                (click)="onSelect(quiz)">
+                <img src="https://lorempixel.com/50/50/?random={{quiz.Id}}" 
+                     alt="{{quiz.Title}}" class="img-circle" />
+                <span>{{quiz.Title}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.header-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 85px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #dedede;
+}
+.header-content .navbar-header {
+  text-align: left;
+}
+.header-content img {
+  height: 80px;
+  margin: 3px 0 0 8px;
+}
+.body-content {
+  margin-top: 100px;
+}
+@media (max-width: 767px) {
+  .header-content .navbar-header {
+    text-align: center;
+  }
+  .body-content {
+    padding-top: 50px;
+  }
+}

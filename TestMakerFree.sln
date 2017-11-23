@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_02", "TestMakerFreeWebApp_Chapter_02\TestMakerFreeWebApp_Chapter_02.csproj", "{89647C57-5252-4489-A96B-3F23A3BEE5FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_03_Part01", "TestMakerFreeWebApp_Chapter_03_Part01\TestMakerFreeWebApp_Chapter_03_Part01.csproj", "{52062454-F3D5-462D-A4DA-2E953D7FFCCA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_01_Part01", "TestMakerFreeWebApp_Chapter_01_Part01\TestMakerFreeWebApp_Chapter_01_Part01.csproj", "{A686D3E4-A404-4BC9-BAE7-5C43898080EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_01_Part02", "TestMakerFreeWebApp_Chapter_01_Part02\TestMakerFreeWebApp_Chapter_01_Part02.csproj", "{5CAFB74D-416F-46AB-9C4C-A4E98F33703D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_03_Part02", "TestMakerFreeWebApp_Chapter_03_Part02\TestMakerFreeWebApp_Chapter_03_Part02.csproj", "{90ADBED8-EAEA-4FE9-97CC-9FC3D3481DE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_04", "TestMakerFreeWebApp_Chapter_04\TestMakerFreeWebApp_Chapter_04.csproj", "{20F6109F-1C29-48EF-B04D-321705DDF3AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_05_Part01", "TestMakerFreeWebApp_Chapter_05_Part01\TestMakerFreeWebApp_Chapter_05_Part01.csproj", "{773A9209-5B35-4CCC-999C-F61ADABB14C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_05_Part02", "TestMakerFreeWebApp_Chapter_05_Part02\TestMakerFreeWebApp_Chapter_05_Part02.csproj", "{4FF36AA9-78D7-466C-9AF9-3C9FA8E06B8B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_06", "TestMakerFreeWebApp_Chapter_06\TestMakerFreeWebApp_Chapter_06.csproj", "{5621AAF8-44D9-4969-AC01-F80D257429D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_07", "TestMakerFreeWebApp_Chapter_07\TestMakerFreeWebApp_Chapter_07.csproj", "{47CFCD7F-64A3-4512-A57E-A23A71697722}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_08", "TestMakerFreeWebApp_Chapter_08\TestMakerFreeWebApp_Chapter_08.csproj", "{0E97B860-86B8-4500-9865-A2321CE79B19}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_09", "TestMakerFreeWebApp_Chapter_09\TestMakerFreeWebApp_Chapter_09.csproj", "{0527878E-140D-44D7-BB97-82C0EAD2D261}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_10", "TestMakerFreeWebApp_Chapter_10\TestMakerFreeWebApp_Chapter_10.csproj", "{81B3F8CE-A238-4850-829D-004A16BDEA3E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_UpdatedProject", "TestMakerFreeWebApp_UpdatedProject\TestMakerFreeWebApp_UpdatedProject.csproj", "{213DE80A-DBF6-4280-9060-AAA115947FB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89647C57-5252-4489-A96B-3F23A3BEE5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89647C57-5252-4489-A96B-3F23A3BEE5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89647C57-5252-4489-A96B-3F23A3BEE5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89647C57-5252-4489-A96B-3F23A3BEE5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52062454-F3D5-462D-A4DA-2E953D7FFCCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52062454-F3D5-462D-A4DA-2E953D7FFCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52062454-F3D5-462D-A4DA-2E953D7FFCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52062454-F3D5-462D-A4DA-2E953D7FFCCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A686D3E4-A404-4BC9-BAE7-5C43898080EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A686D3E4-A404-4BC9-BAE7-5C43898080EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A686D3E4-A404-4BC9-BAE7-5C43898080EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A686D3E4-A404-4BC9-BAE7-5C43898080EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CAFB74D-416F-46AB-9C4C-A4E98F33703D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CAFB74D-416F-46AB-9C4C-A4E98F33703D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CAFB74D-416F-46AB-9C4C-A4E98F33703D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CAFB74D-416F-46AB-9C4C-A4E98F33703D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90ADBED8-EAEA-4FE9-97CC-9FC3D3481DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90ADBED8-EAEA-4FE9-97CC-9FC3D3481DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90ADBED8-EAEA-4FE9-97CC-9FC3D3481DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90ADBED8-EAEA-4FE9-97CC-9FC3D3481DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F6109F-1C29-48EF-B04D-321705DDF3AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F6109F-1C29-48EF-B04D-321705DDF3AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F6109F-1C29-48EF-B04D-321705DDF3AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F6109F-1C29-48EF-B04D-321705DDF3AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773A9209-5B35-4CCC-999C-F61ADABB14C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773A9209-5B35-4CCC-999C-F61ADABB14C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773A9209-5B35-4CCC-999C-F61ADABB14C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773A9209-5B35-4CCC-999C-F61ADABB14C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF36AA9-78D7-466C-9AF9-3C9FA8E06B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF36AA9-78D7-466C-9AF9-3C9FA8E06B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF36AA9-78D7-466C-9AF9-3C9FA8E06B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF36AA9-78D7-466C-9AF9-3C9FA8E06B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5621AAF8-44D9-4969-AC01-F80D257429D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5621AAF8-44D9-4969-AC01-F80D257429D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5621AAF8-44D9-4969-AC01-F80D257429D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5621AAF8-44D9-4969-AC01-F80D257429D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47CFCD7F-64A3-4512-A57E-A23A71697722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47CFCD7F-64A3-4512-A57E-A23A71697722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47CFCD7F-64A3-4512-A57E-A23A71697722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47CFCD7F-64A3-4512-A57E-A23A71697722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E97B860-86B8-4500-9865-A2321CE79B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E97B860-86B8-4500-9865-A2321CE79B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E97B860-86B8-4500-9865-A2321CE79B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E97B860-86B8-4500-9865-A2321CE79B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0527878E-140D-44D7-BB97-82C0EAD2D261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0527878E-140D-44D7-BB97-82C0EAD2D261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0527878E-140D-44D7-BB97-82C0EAD2D261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0527878E-140D-44D7-BB97-82C0EAD2D261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B3F8CE-A238-4850-829D-004A16BDEA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B3F8CE-A238-4850-829D-004A16BDEA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B3F8CE-A238-4850-829D-004A16BDEA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B3F8CE-A238-4850-829D-004A16BDEA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{213DE80A-DBF6-4280-9060-AAA115947FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213DE80A-DBF6-4280-9060-AAA115947FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213DE80A-DBF6-4280-9060-AAA115947FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213DE80A-DBF6-4280-9060-AAA115947FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		LessCompiler = 5621aaf8-44d9-4969-ac01-f80d257429d9,0e97b860-86b8-4500-9865-a2321ce79b19,0527878e-140d-44d7-bb97-82c0ead2d261
+		SolutionGuid = {5F8992FB-721E-4C7A-845A-FD9890E09102}
+	EndGlobalSection
+EndGlobal

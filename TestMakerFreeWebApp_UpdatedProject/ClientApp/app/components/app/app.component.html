@@ -1,0 +1,22 @@
+<div class='container-fluid'>
+    <div class='row'>
+        <nav class="navbar header-content">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a [routerLink]="['/home']">
+                        <img src="/dist/res/img/logo.svg" alt="TestMakerFree" />
+                    </a>
+                </div>
+                <quiz-search class="search-header" placeholder="Search for a quiz..."></quiz-search>
+            </div>
+        </nav>
+    </div>
+    <div class='row'>
+        <div class='col-sm-3'>
+            <nav-menu></nav-menu>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿<h3>Answers</h3>
+<div *ngIf="answers.length > 0">
+    <table class="answers">
+        <thead>
+            <tr>
+                <th>Text</th>
+                <th>Value</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let answer of answers">
+                <td>{{answer.Text}}</td>
+                <td>{{answer.Value}}</td>
+                <td><input type="button" value="Edit"
+                           (click)="onEdit(answer)" />
+                    <input type="button" value="Delete"
+                           (click)="onDelete(answer)" /></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="answers.length == 0">
+    This questions has no answers (yet):
+    click the <strong>Add a new Answer</strong> button to add the first one!
+</div>
+<input type="button" value="Add a new Answer" (click)="onCreate()" />

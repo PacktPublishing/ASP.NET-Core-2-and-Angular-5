@@ -1,0 +1,37 @@
+﻿<h2>{{title}}</h2>
+<div class="answer-edit">
+    <div class="form-group">
+        <label for="text">Answer text:</label>
+        <br />
+        <textarea id="text" 
+                  [(ngModel)]="answer.Text" 
+                  placeholder="enter a suitable text..."
+                  class="form-control"
+                  ></textarea>
+    </div>
+
+    <div>
+        <label for="value">Score Value:</label>
+        <br />
+        <select id="value" name="value" 
+                [(ngModel)]="answer.Value" 
+                class="form-control"
+                >
+            <option *ngFor="let num of [-5,-4,-3,-2,-1,0,1,2,3,4,5]" [value]="num">{{num}}</option>
+        </select>
+    </div>
+
+    <div class="commands">
+        <input *ngIf="editMode" type="button"
+               value="Apply Changes"
+               (click)="onSubmit(answer)"
+               class="btn btn-success" />
+        <input *ngIf="!editMode" type="button"
+               value="Create the Answer!"
+               (click)="onSubmit(answer)"
+               class="btn btn-success" />
+        <input type="button" value="Cancel"
+               (click)="onBack()"
+               class="btn btn-default" />
+    </div>
+</div>

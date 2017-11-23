@@ -1,0 +1,60 @@
+<div class="login-container">
+    <img id="login-img" class="login-img" 
+         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+    <h2 class="login-title">{{title}}</h2>
+    <form [formGroup]="form" 
+          (ngSubmit)="onSubmit()"
+          class="login-form">
+        <div *ngIf="form.errors?.auth"
+            class="error-panel help-block">
+            {{form.errors.auth}}
+        </div>
+        <div class="form-group"
+             [ngClass]="{ 'has-error has-feedback' : hasError('Username') }">
+            <input type="text" required
+                   formControlName="Username"
+                   class="form-control"
+                   placeholder="Username or Email address" />
+            <span *ngIf="hasError('Username')"
+                  class="glyphicon glyphicon-remove form-control-feedback"
+                  aria-hidden="true"></span>
+            <div *ngIf="hasError('Username')"
+                 class="help-block">
+                Please insert a valid username or e-mail address.
+            </div>
+        </div>
+        <div class="form-group"
+             [ngClass]="{ 'has-error has-feedback' : hasError('Password') }">
+            <input type="password" required
+                   formControlName="Password"
+                   class="form-control"
+                   placeholder="Password" />
+            <span *ngIf="hasError('Password')"
+                  class="glyphicon glyphicon-remove form-control-feedback"
+                  aria-hidden="true"></span>
+            <div *ngIf="hasError('Password')"
+                 class="help-block">
+                Please insert a password.
+            </div>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="remember" value="remember" />Remember me</label>
+        </div>
+        <button type="submit"
+                [disabled]="form.invalid"
+                class="btn btn-md btn-success btn-block btn-signin">
+            Sign in
+        </button>
+    </form>
+    <div class="login-link">
+        <a href="#">
+            Forgot the password?
+        </a>
+    </div>
+    <div class="login-link">
+        <a [routerLink]="['/register']">
+            Don't have an account? Click here to create one!
+        </a>
+    </div>
+    <login-externalproviders></login-externalproviders>
+</div>

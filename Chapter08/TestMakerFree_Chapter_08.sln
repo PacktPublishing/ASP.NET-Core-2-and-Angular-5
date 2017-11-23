@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMakerFreeWebApp_Chapter_08", "TestMakerFreeWebApp_Chapter_08\TestMakerFreeWebApp_Chapter_08.csproj", "{0E97B860-86B8-4500-9865-A2321CE79B19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E97B860-86B8-4500-9865-A2321CE79B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E97B860-86B8-4500-9865-A2321CE79B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E97B860-86B8-4500-9865-A2321CE79B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E97B860-86B8-4500-9865-A2321CE79B19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F8992FB-721E-4C7A-845A-FD9890E09102}
+		LessCompiler = 5621aaf8-44d9-4969-ac01-f80d257429d9,0e97b860-86b8-4500-9865-a2321ce79b19,0527878e-140d-44d7-bb97-82c0ead2d261
+	EndGlobalSection
+EndGlobal

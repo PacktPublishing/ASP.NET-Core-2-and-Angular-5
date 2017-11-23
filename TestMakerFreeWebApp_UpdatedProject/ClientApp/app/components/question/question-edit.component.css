@@ -1,0 +1,14 @@
+.question-edit {
+  width: 80%;
+}
+@media (max-width: 767px) {
+  .question-edit {
+    width: 100%;
+  }
+}
+.question-edit textarea {
+  min-height: 100px;
+}
+.question-edit .commands {
+  margin-top: 20px;
+}

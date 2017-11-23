@@ -1,0 +1,17 @@
+.answer-edit {
+  width: 80%;
+}
+@media (max-width: 767px) {
+  .answer-edit {
+    width: 100%;
+  }
+}
+.answer-edit textarea {
+  min-height: 100px;
+}
+.answer-edit select {
+  max-width: 200px;
+}
+.answer-edit .commands {
+  margin-top: 20px;
+}
