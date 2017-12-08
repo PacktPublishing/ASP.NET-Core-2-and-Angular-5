@@ -13,7 +13,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using System.Diagnostics;
 
 namespace TestMakerFree
 {
@@ -51,14 +50,13 @@ namespace TestMakerFree
                 })
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            // Add Authentication
+            // Add Authentication with JWT Tokens
             services.AddAuthentication(opts =>
             {
                 opts.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 opts.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 opts.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-            // Add Jwt token support
             .AddJwtBearer(cfg =>
             {
                 cfg.RequireHttpsMetadata = false;
@@ -79,12 +77,6 @@ namespace TestMakerFree
                     ValidateAudience = true
                 };
                 cfg.IncludeErrorDetails = true;
-            })
-            // Add Facebook support
-            .AddFacebook(opts =>
-            {
-                opts.AppId = Configuration["Auth:Facebook:AppId"];
-                opts.AppSecret = Configuration["Auth:Facebook:AppSecret"];
             });
         }
 
@@ -94,12 +86,10 @@ namespace TestMakerFree
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-#if DEBUG
                 app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
                 {
                     HotModuleReplacement = true
                 });
-#endif
             }
             else
             {
@@ -139,12 +129,12 @@ namespace TestMakerFree
              * ref.: https://docs.microsoft.com/en-us/aspnet/core/migration/1x-to-2x/#move-database-initialization-code
              * 
             // Create a service scope to get an ApplicationDbContext instance using DI
-            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            using (var serviceScope =
+                app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
                 var dbContext = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();
                 var roleManager = serviceScope.ServiceProvider.GetService<RoleManager<IdentityRole>>();
                 var userManager = serviceScope.ServiceProvider.GetService<UserManager<ApplicationUser>>();
-
                 // Create the Db if it doesn't exist and applies any pending migration.
                 dbContext.Database.Migrate();
 
