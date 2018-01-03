@@ -27,6 +27,7 @@
     "aspnet-webpack": "^2.0.1",
     "awesome-typescript-loader": "^3.4.0",
     "bootstrap": "3.3.7",
+    "bootswatch": "3.3.7",
     "css": "2.2.1",
     "css-loader": "^0.28.7",
     "es6-shim": "0.35.3",
