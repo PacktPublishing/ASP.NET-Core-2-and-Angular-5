@@ -52,19 +52,28 @@ export class AuthResponseInterceptor implements HttpInterceptor {
                 // JWT token might be expired:
                 // try to get a new one using refresh token
                 console.log("Token expired. Attempting refresh...");
+
+                //  ===[2018.01.05 FIX - BOOK UPDATE]===
+                // cfr. https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/8
+                // store current request into a local variable
+                var previousRequest = this.currentRequest;
+
                 this.auth.refreshToken()
                     .subscribe(res => {
-                    if (res) {
-                        // refresh token successful
-                        console.log("refresh token successful");
+                        if (res) {
+                            // refresh token successful
+                            console.log("refresh token successful");
 
-                        // re-submit the failed request
-                        var http = this.injector.get(HttpClient);
-                        http.request(this.currentRequest).subscribe(
-                            (result:any) => {
-                                // do something
-                            }, (error:any) => console.error(error)
-                        );
+                            // re-submit the failed request
+                            var http = this.injector.get(HttpClient);
+
+                            //  ===[2018.01.05 FIX - BOOK UPDATE]===
+                            // cfr. https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/8
+                            http.request(previousRequest).subscribe(
+                                (result:any) => {
+                                    // do something
+                                }, (error:any) => console.error(error)
+                            );
                     }
                     else {
                         // refresh token failed
