@@ -40,6 +40,10 @@ namespace TestMakerFreeWebApp.Controllers
             user = await UserManager.FindByEmailAsync(model.Email);
             if (user != null) return BadRequest("Email already exists.");
 
+            // added in 2018.01.06 to fix GitHub issue #11
+            // ref.: https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/11
+            if (!PasswordCheck.IsValidPassword(model.Password, UserManager.Options.Password)) return BadRequest("Password is too weak.");
+
             var now = DateTime.Now;
 
             // create a new Item with the client-sent json data

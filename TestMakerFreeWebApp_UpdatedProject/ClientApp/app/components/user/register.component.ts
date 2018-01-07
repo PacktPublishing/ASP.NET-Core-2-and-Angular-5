@@ -65,7 +65,14 @@ export class RegisterComponent {
                         "register": "User registration failed."
                     });
                 }
-            }, error => console.log(error));
+            }, error => {
+                console.log(error);
+                // added in 2018.01.06 to fix GitHub issue #11
+                // ref.: https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/11
+                this.getFormControl("Password").setErrors({
+                    "Password": true
+                });
+            });
     }
 
     onBack() {
