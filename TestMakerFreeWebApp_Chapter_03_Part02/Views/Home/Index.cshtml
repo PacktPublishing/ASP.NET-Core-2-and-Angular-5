@@ -2,7 +2,10 @@
     ViewData["Title"] = "Home Page";
 }
 
-<app asp-prerender-module="ClientApp/dist/main-server">Loading...</app>
+@* [2018.01.10] Server-Side Rendering is currently disabled due to the following issue: *@
+@* https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/9 *@
+@* <app asp-prerender-module="ClientApp/dist/main-server">Loading...</app>*@
+<app>Loading...</app>
 
 <script src="~/dist/vendor.js" asp-append-version="true"></script>
 @section scripts {
