@@ -150,7 +150,13 @@ namespace TestMakerFreeWebApp.Controllers
             DbContext.SaveChanges();
 
             // return an HTTP Status 200 (OK).
-            return new OkResult();
+            // return new OkResult();
+
+            // [2018.01.26] BOOK ERRATA: return a NoContentResult to comply with a bug in the Angular 5 HttpRouter (fixed on December 2017, see here: https://github.com/angular/angular/issues/19502) which expects a JSON by default 
+            // and will throw a SyntaxError: Unexpected end of JSON input in case of an HTTP 200 result with no content.
+            // ref.: https://github.com/angular/angular/issues/19502
+            // ref.: https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/19
+            return new NoContentResult();
         }
         #endregion
 

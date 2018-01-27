@@ -38,7 +38,7 @@ export class AuthResponseInterceptor implements HttpInterceptor {
                     }
                 })
                 .catch(error => {
-                    return this.handleError(error)
+                    return this.handleError(error, next)
                 });
         }
         else {
@@ -46,7 +46,7 @@ export class AuthResponseInterceptor implements HttpInterceptor {
         }
     }
 
-    handleError(err: any) {
+    handleError(err: any, next: HttpHandler) {
         if (err instanceof HttpErrorResponse) {
             if (err.status === 401) {
                 // JWT token might be expired:
@@ -55,37 +55,22 @@ export class AuthResponseInterceptor implements HttpInterceptor {
 
                 //  ===[2018.01.05 FIX - BOOK UPDATE]===
                 // cfr. https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/8
+                // and  https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/15
                 // store current request into a local variable
                 var previousRequest = this.currentRequest;
 
-                this.auth.refreshToken()
-                    .subscribe(res => {
-                        if (res) {
-                            // refresh token successful
-                            console.log("refresh token successful");
-
-                            // re-submit the failed request
-                            var http = this.injector.get(HttpClient);
-
-                            //  ===[2018.01.05 FIX - BOOK UPDATE]===
-                            // cfr. https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/8
-                            http.request(previousRequest).subscribe(
-                                (result:any) => {
-                                    // do something
-                                }, (error:any) => console.error(error)
-                            );
-                    }
-                    else {
-                        // refresh token failed
-                        console.log("refresh token failed");
-
-                        // erase current token
-                        this.auth.logout();
-
-                        // redirect to login page
-                        this.router.navigate(["login"]);
-                    }
-                }, error => console.log(error));
+                // thanks to @mattjones61 for the following code
+                return this.auth.refreshToken()
+                    .flatMap((refreshed) => {
+                        var token = (this.auth.isLoggedIn()) ? this.auth.getAuth()!.token : null;
+                        if (token) {
+                            previousRequest = previousRequest.clone({
+                                setHeaders: { Authorization: `Bearer ${token}` }
+                            });
+                            console.log("header token reset");
+                        }
+                        return next.handle(previousRequest);
+                    });
             }
         }
         return Observable.throw(err);
