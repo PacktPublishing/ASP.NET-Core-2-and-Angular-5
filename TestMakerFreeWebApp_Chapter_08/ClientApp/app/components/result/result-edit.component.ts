@@ -65,8 +65,9 @@ export class ResultEditComponent {
     updateForm() {
         this.form.setValue({
             Text: this.result.Text,
-            MinValue: this.result.MinValue || '',
-            MaxValue: this.result.MaxValue || ''
+            // BOOK ERRATA FIX. ref.: https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5/issues/21
+            MinValue: this.result.MinValue,
+            MaxValue: this.result.MaxValue
         });
     }
 
