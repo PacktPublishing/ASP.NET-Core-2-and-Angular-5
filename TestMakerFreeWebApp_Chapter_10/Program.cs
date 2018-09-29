@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using TestMakerFreeWebApp.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestMakerFree
 {
@@ -34,6 +35,11 @@ namespace TestMakerFree
                 var dbContext = scope.ServiceProvider.GetService<ApplicationDbContext>();
                 var roleManager = scope.ServiceProvider.GetService<RoleManager<IdentityRole>>();
                 var userManager = scope.ServiceProvider.GetService<UserManager<ApplicationUser>>();
+
+                // Create the Db if it doesn't exist and applies any pending migration.
+                dbContext.Database.Migrate();
+
+                // Seed the Db
                 DbSeeder.Seed(dbContext, roleManager, userManager);
             }
             host.Run();

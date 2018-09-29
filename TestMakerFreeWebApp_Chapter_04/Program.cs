@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using TestMakerFreeWebApp.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestMakerFree
 {
@@ -31,6 +32,11 @@ namespace TestMakerFree
             using (var scope = host.Services.CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetService<ApplicationDbContext>();
+
+                // Create the Db if it doesn't exist and applies any pending migration.
+                dbContext.Database.Migrate();
+
+                // Seed the Db
                 DbSeeder.Seed(dbContext);
             }
             host.Run();
